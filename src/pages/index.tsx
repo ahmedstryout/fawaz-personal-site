@@ -1,9 +1,29 @@
 import type {NextPage} from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {Box} from '@chakra-ui/react'
+import {Box, SimpleGrid} from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero'
 import Marquee from '@/components/marquee/Marquee'
+import TiltedCards from '@/components/tilted-cards/TiltedCards'
+
+const works = [
+  {
+    title: 'Lorem ipsum dolor sit amet.',
+    desc: 'Branding | UI/UX | Graphic Design',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet.',
+    desc: 'Branding | UI/UX | Graphic Design',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet.',
+    desc: 'Branding | UI/UX | Graphic Design',
+  },
+  {
+    title: 'Lorem ipsum dolor sit amet.',
+    desc: 'Branding | UI/UX | Graphic Design',
+  },
+]
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +45,11 @@ const Home: NextPage = () => {
         <Hero />
       </Box>
       <Marquee />
+      <SimpleGrid columns={2} spacing={10} my={12}>
+        {works.map((work, idx) => (
+          <TiltedCards key={idx} />
+        ))}
+      </SimpleGrid>
     </Box>
   )
 }
