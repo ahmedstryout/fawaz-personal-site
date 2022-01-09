@@ -29,14 +29,16 @@ export default function Footer() {
           </Heading>
           <Flex columnGap={6}>
             {socialLinks.map(link => (
-              <Text
+              <a
+                href={link.link}
                 key={link.label}
-                fontSize={'24px'}
-                opacity={0.7}
-                cursor={'pointer'}
+                target="_blank"
+                rel="noreferrer"
               >
-                {link.label}
-              </Text>
+                <Text fontSize={'24px'} opacity={0.7} cursor={'pointer'}>
+                  {link.label}
+                </Text>
+              </a>
             ))}
           </Flex>
         </Box>

@@ -1,19 +1,19 @@
 export const socialLinks = [
   {
     label: 'Behance.',
-    link: '#',
+    link: 'https://www.behance.net/fawazc91',
   },
   {
     label: 'Dribble.',
-    link: '#',
+    link: 'https://dribbble.com/Ahmedstryout',
   },
   {
     label: 'Instagram.',
-    link: '#',
+    link: 'https://www.instagram.com/ui.joe/',
   },
   {
     label: 'LinkedIn.',
-    link: '#',
+    link: 'https://www.linkedin.com/in/fawaz-ahamed',
   },
 ]
 
