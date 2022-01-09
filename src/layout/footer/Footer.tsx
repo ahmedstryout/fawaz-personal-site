@@ -29,7 +29,12 @@ export default function Footer() {
           </Heading>
           <Flex columnGap={6}>
             {socialLinks.map(link => (
-              <Text key={link.label} fontSize={'24px'} opacity={0.7}>
+              <Text
+                key={link.label}
+                fontSize={'24px'}
+                opacity={0.7}
+                cursor={'pointer'}
+              >
                 {link.label}
               </Text>
             ))}
@@ -42,7 +47,7 @@ export default function Footer() {
           <Flex columnGap={6}>
             {navigation.map(link => (
               <Link key={link.label} href={link.path} passHref>
-                <Text fontSize={'24px'} opacity={0.7}>
+                <Text fontSize={'24px'} opacity={0.7} cursor={'pointer'}>
                   {link.label}
                 </Text>
               </Link>
