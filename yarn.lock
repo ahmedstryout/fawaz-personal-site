@@ -1134,6 +1134,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/manrope@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "@fontsource/manrope@npm:4.5.1"
+  checksum: 7da8c684948036a6f956b7d6a9798371150c422c3a65b57bf128d44e414c7cb4791d2c059cf251b34c02abf0bb51e5969435d9fbba0fb1ff75a43f47c0a7e6fb
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -3042,6 +3049,7 @@ __metadata:
     "@chakra-ui/react": ^1.7.3
     "@emotion/react": ^11
     "@emotion/styled": ^11
+    "@fontsource/manrope": ^4.5.1
     "@types/node": 17.0.5
     "@types/react": 17.0.38
     eslint: 8.6.0
