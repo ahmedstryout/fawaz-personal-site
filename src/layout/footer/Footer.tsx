@@ -6,14 +6,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <Flex
-      px={28}
-      py={12}
-      bg="black"
-      color="white"
-      position={'relative'}
-      mt="50vh"
-    >
+    <Flex px={28} py={12} bg="black" color="white" position={'relative'}>
       <Box w={'40%'}>
         <Heading mb={8} fontSize={'52px'}>
           Got a great Idea? <br /> Let’s talk

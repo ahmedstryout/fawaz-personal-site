@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import {Box} from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero'
+import Marquee from '@/components/marquee/Marquee'
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
       >
         <Hero />
       </Box>
+      <Marquee />
     </Box>
   )
 }
