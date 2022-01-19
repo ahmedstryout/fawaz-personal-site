@@ -16,7 +16,7 @@ export default function Marquee() {
         textShadow={'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black'}
         my={8}
         color="white"
-        fontSize={'150px'}
+        fontSize={['90px', '150px']}
         py={4}
         zIndex={10}
         _hover={{

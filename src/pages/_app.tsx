@@ -11,7 +11,7 @@ function MyApp({Component, pageProps}: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
-      <Box px={28}>
+      <Box px={['20px', 28]}>
         <Component {...pageProps} />
       </Box>
       <Footer />

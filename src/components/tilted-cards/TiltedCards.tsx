@@ -16,7 +16,7 @@ export default function TiltedCards() {
         verticalAlign={'bottom'}
         position={'relative'}
       >
-        <Box position="absolute" bottom={12}>
+        <Box position="absolute" bottom={12} left={[4]}>
           <Heading as="h3">Lorem ipsum dolor sit amet 👀</Heading>
           <Text opacity={0.6}>Branding | UI/UX | Graphic Design</Text>
         </Box>

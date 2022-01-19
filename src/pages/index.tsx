@@ -38,14 +38,14 @@ const Home: NextPage = () => {
         as="main"
         borderRadius={'20px'}
         bg="cultured.400"
-        px={24}
-        py={56}
+        px={['10px', 24]}
+        py={['44px', 56]}
         width="100%"
       >
         <Hero />
       </Box>
       <Marquee />
-      <SimpleGrid columns={2} spacing={10} my={12}>
+      <SimpleGrid columns={[1, 2]} spacing={10} my={12}>
         {works.map((work, idx) => (
           <TiltedCards key={idx} />
         ))}
