@@ -36,7 +36,7 @@ export default function Footer() {
       <Flex flexDir={'column'}>
         <Box mb={8}>
           <Heading as="h2" mb={4} fontSize={['26px', '26px', '32px']}>
-            Find me here
+            Find Me Here
           </Heading>
           <Flex
             columnGap={[2, 4, 6]}

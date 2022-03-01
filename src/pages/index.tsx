@@ -5,6 +5,7 @@ import {Box, SimpleGrid} from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero'
 import Marquee from '@/components/marquee/Marquee'
 import TiltedCards from '@/components/tilted-cards/TiltedCards'
+import {fetchAPI} from 'utils/strapi'
 
 const works = [
   {
@@ -25,7 +26,21 @@ const works = [
   },
 ]
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+  const projects = await fetchAPI('/projects', {
+    populate: ['image'],
+  })
+
+  return {
+    props: {
+      projects: projects.data,
+    },
+    // revalidate: 1,
+  }
+}
+
+const Home: NextPage<{projects: any}> = ({projects}) => {
+  console.log({projects})
   return (
     <Box className={styles.container}>
       <Head>
