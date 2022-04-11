@@ -7,6 +7,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engine": {
+    "node": "14",
+    "npm": "6"
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.7.3",
     "@emotion/react": "^11",

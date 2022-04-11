@@ -27,9 +27,16 @@ const works = [
 ]
 
 export async function getStaticProps() {
-  const projects = await fetchAPI('/projects', {
-    populate: ['image'],
-  })
+  let projects = {
+    data: [],
+  }
+  try {
+    projects = await fetchAPI('/projects', {
+      // populate: ['image'],
+    })
+  } catch (err) {
+    console.error(err)
+  }
 
   return {
     props: {
