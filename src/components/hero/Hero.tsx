@@ -3,7 +3,11 @@ import {Box, Heading, Text} from '@chakra-ui/react'
 export default function Hero() {
   return (
     <Box w={['100%', '60%']} textAlign={['center', 'left']}>
-      <Heading fontSize={['60px', '138px']} color="black">
+      <Heading
+        fontSize={['60px', '138px']}
+        color="black"
+        letterSpacing={'-0.07em'}
+      >
         Humanising
       </Heading>
       <Heading
@@ -11,6 +15,7 @@ export default function Hero() {
         color="white"
         fontSize={['48px', '100px']}
         mb={'30px'}
+        letterSpacing={'-0.03em'}
       >
         Designs.Forever.
       </Heading>

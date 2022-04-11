@@ -6,6 +6,7 @@ import Hero from '@/components/hero/Hero'
 import Marquee from '@/components/marquee/Marquee'
 import TiltedCards from '@/components/tilted-cards/TiltedCards'
 import {fetchAPI} from 'utils/strapi'
+import {Work} from 'types'
 
 const works = [
   {
@@ -46,7 +47,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home: NextPage<{projects: any}> = ({projects}) => {
+const Home: NextPage<{projects: any[]}> = ({projects}) => {
   console.log({projects})
   return (
     <Box className={styles.container}>
@@ -68,8 +69,8 @@ const Home: NextPage<{projects: any}> = ({projects}) => {
       </Box>
       <Marquee />
       <SimpleGrid columns={[1, 2]} spacing={10} my={12}>
-        {works.map((work, idx) => (
-          <TiltedCards key={idx} />
+        {projects.map((project, idx) => (
+          <TiltedCards key={project.id} work={project.attributes} />
         ))}
       </SimpleGrid>
     </Box>
