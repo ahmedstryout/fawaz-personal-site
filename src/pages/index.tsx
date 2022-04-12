@@ -28,7 +28,7 @@ export async function getStaticProps() {
 const Home: NextPage<{projects: any[]}> = ({projects}) => {
   console.log({projects})
   return (
-    <Box >
+    <Box>
       <Box
         as="main"
         borderRadius={'20px'}
@@ -39,6 +39,7 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
       >
         <Hero />
       </Box>
+      <span id="work" />
       <Marquee />
       <SimpleGrid columns={[1, 2]} spacing={['30px', 10]} my={12}>
         {projects.map((project, _idx) => (

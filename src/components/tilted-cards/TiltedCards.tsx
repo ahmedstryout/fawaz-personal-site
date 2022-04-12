@@ -13,7 +13,7 @@ export default function TiltedCards({work, id}: TiltedCardProps) {
   return (
     <Link href={`/projects/${id}`} passHref>
       <Box>
-        <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
+        <Tilt tiltMaxAngleX={1} tiltMaxAngleY={1}>
           <Box
             bg="#2D3039"
             borderRadius={'20px'}
