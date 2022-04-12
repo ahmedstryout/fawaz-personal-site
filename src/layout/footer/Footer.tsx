@@ -89,7 +89,15 @@ export default function Footer() {
         alt="UI Joe"
         bottom={0}
       />
-      <Text position="absolute" left={'43vw'} bottom={2} opacity={0.6}>
+      <Text
+        position="absolute"
+        left={0}
+        right={0}
+        marginX={'auto'}
+        bottom={2}
+        textAlign="center"
+        opacity={0.6}
+      >
         Designed with <Icon as={FaHeart} fill="red" pt={1} /> by Fawaz
       </Text>
     </Flex>
