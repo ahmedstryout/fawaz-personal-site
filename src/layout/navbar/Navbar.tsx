@@ -10,13 +10,23 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import {navigation} from 'constants/index.constants'
-import {AiOutlineMenu} from 'react-icons/ai'
+// import {AiOutlineMenu} from 'react-icons/ai'
 import ContactModal from '@/components/contact-modal/ContactModal'
+import MenuModal from '../mobile/MenuModal'
 
 export default function Navbar() {
   const router = useRouter()
   const [isMobile] = useMediaQuery('(max-width:500px)')
-  const {isOpen, onOpen, onClose} = useDisclosure()
+  const {
+    isOpen: isContactMeOpen,
+    onOpen: openContactMe,
+    onClose: closeContactMe,
+  } = useDisclosure()
+  const {
+    isOpen: isMobileMenuOpen,
+    onOpen: openMobileMenu,
+    onClose: closeMobileMenu,
+  } = useDisclosure()
 
   const openContactModal = router.query.contact
 
@@ -24,9 +34,9 @@ export default function Navbar() {
 
   React.useEffect(() => {
     if (Boolean(openContactModal)) {
-      onOpen()
+      openContactMe()
     } else {
-      onClose()
+      closeContactMe()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openContactModal])
@@ -43,8 +53,15 @@ export default function Navbar() {
           UI.joe
         </Heading>
         {isMobile ? (
-          <Icon as={AiOutlineMenu} boxSize={'40px'} />
+          <Text
+            fontSize={'20px'}
+            cursor={'pointer'}
+            onClick={() => openMobileMenu()}
+          >
+            menu.
+          </Text>
         ) : (
+          // <Icon as={AiOutlineMenu} boxSize={'40px'} />
           <Flex columnGap={6}>
             {navigation.map(ele => (
               <Link key={ele.label} href={ele.path} passHref>
@@ -57,7 +74,8 @@ export default function Navbar() {
         )}
       </Flex>
 
-      <ContactModal isOpen={isOpen} onClose={onClose} />
+      <ContactModal isOpen={isContactMeOpen} onClose={closeContactMe} />
+      <MenuModal isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
     </>
   )
 }
