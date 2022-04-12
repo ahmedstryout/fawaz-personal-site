@@ -11,7 +11,7 @@ interface TiltedCardProps {
 
 export default function TiltedCards({work, id}: TiltedCardProps) {
   return (
-    <Link href={`projects/${id}`} passHref>
+    <Link href={`/projects/${id}`} passHref>
       <Box>
         <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
           <Box
