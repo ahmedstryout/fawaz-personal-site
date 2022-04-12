@@ -12,9 +12,11 @@ import {
 import {navigation, socialLinks} from 'constants/index.constants'
 import {FaHeart} from 'react-icons/fa'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 
 export default function Footer() {
   const [isSmall] = useMediaQuery('max-width:460px')
+  const router = useRouter()
   return (
     <Flex
       flexDirection={['column', 'column', 'row']}
@@ -29,7 +31,13 @@ export default function Footer() {
         <Heading mb={8} fontSize={['38px', '38px', '52px']}>
           Got a great Idea? <br /> Let’s talk
         </Heading>
-        <Button borderRadius={'50px'} px={16} color="black" size="lg">
+        <Button
+          borderRadius={'50px'}
+          px={16}
+          color="black"
+          size="lg"
+          onClick={() => router.push({search: '?contact=true'})}
+        >
           Hire me
         </Button>
       </Box>
