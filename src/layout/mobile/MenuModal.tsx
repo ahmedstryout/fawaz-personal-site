@@ -37,7 +37,7 @@ export default function MenuModal({
       <ModalContent
         w="100%"
         h="100%"
-        px={['20px', '30px', '50px']}
+        px={['1px', '30px', '50px']}
         bgColor="carminePink.500"
       >
         <ModalHeader>

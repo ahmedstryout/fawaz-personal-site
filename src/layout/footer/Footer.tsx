@@ -14,7 +14,7 @@ import {FaHeart} from 'react-icons/fa'
 import Link from 'next/link'
 
 export default function Footer() {
-  const [isSmall] = useMediaQuery('max-width:600px')
+  const [isSmall] = useMediaQuery('max-width:460px')
   return (
     <Flex
       flexDirection={['column', 'column', 'row']}
@@ -87,6 +87,8 @@ export default function Footer() {
         right={0}
         src={isSmall ? '/assets/png/brand-sm.png' : '/assets/png/brand.png'}
         alt="UI Joe"
+        h={['80px', 'auto']}
+        w={['264px', 'auto']}
         bottom={0}
       />
       <Text

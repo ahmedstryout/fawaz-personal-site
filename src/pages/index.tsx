@@ -68,7 +68,7 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
         <Hero />
       </Box>
       <Marquee />
-      <SimpleGrid columns={[1, 2]} spacing={10} my={12}>
+      <SimpleGrid columns={[1, 2]} spacing={['30px', 10]} my={12}>
         {projects.map((project, idx) => (
           <TiltedCards key={project.id} work={project.attributes} />
         ))}

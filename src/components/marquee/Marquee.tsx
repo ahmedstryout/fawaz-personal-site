@@ -6,7 +6,7 @@ export default function Marquee() {
   // const [play, setPlay] = React.useState(true)
 
   return (
-    <Box mx={['-20px', '-125px']}>
+    <Box mx={['-20px', '-125px']} mt={['5px', '0px']} mb={['-8px', '0px']}>
       <FastMarquee
         pauseOnHover={true}
         pauseOnClick={true}
@@ -15,10 +15,10 @@ export default function Marquee() {
       >
         <Heading
           textShadow={'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black'}
-          my={8}
+          my={[0, 8]}
           color="white"
           fontSize={['90px', '150px']}
-          py={4}
+          py={[0, 4]}
           zIndex={10}
           _hover={{
             bgGradient:

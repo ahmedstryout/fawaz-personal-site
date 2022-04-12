@@ -10,7 +10,6 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 import {navigation} from 'constants/index.constants'
-// import {AiOutlineMenu} from 'react-icons/ai'
 import ContactModal from '@/components/contact-modal/ContactModal'
 import MenuModal from '../mobile/MenuModal'
 
@@ -30,8 +29,6 @@ export default function Navbar() {
 
   const openContactModal = router.query.contact
 
-  console.log(openContactModal, 'query')
-
   React.useEffect(() => {
     if (Boolean(openContactModal)) {
       openContactMe()
@@ -47,7 +44,7 @@ export default function Navbar() {
         alignItems="center"
         justifyContent={'space-between'}
         px={['20px', 28]}
-        py={12}
+        py={['19px', 10, 12]}
       >
         <Heading fontSize={'28px'} onClick={() => router.push('/')}>
           UI.joe
@@ -57,6 +54,8 @@ export default function Navbar() {
             fontSize={'20px'}
             cursor={'pointer'}
             onClick={() => openMobileMenu()}
+            letterSpacing={'-0.02em'}
+            opacity={0.7}
           >
             menu.
           </Text>
