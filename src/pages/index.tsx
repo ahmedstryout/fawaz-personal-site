@@ -11,7 +11,7 @@ export async function getStaticProps() {
   }
   try {
     projects = await fetchAPI('/projects', {
-      // populate: ['image'],
+      populate: ['image'],
     })
   } catch (err) {
     console.error(err)

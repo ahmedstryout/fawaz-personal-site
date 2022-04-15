@@ -2,6 +2,7 @@ import Tilt from 'react-parallax-tilt'
 import {Box, Heading, Text} from '@chakra-ui/react'
 import {Work} from 'types'
 import Link from 'next/link'
+import {getStrapiURL} from '../../utils/strapi'
 
 interface TiltedCardProps {
   work: any
@@ -15,14 +16,22 @@ export default function TiltedCards({work, id}: TiltedCardProps) {
       <Box>
         <Tilt tiltMaxAngleX={1} tiltMaxAngleY={1}>
           <Box
-            bg="#2D3039"
+            // bg="#2D3039"
             borderRadius={'20px'}
             color={'white'}
-            px="55px"
-            py="60px"
+            // px="55px"
+            // py="60px"
+            bgSize="100% 100%"
             height={['450px', '550px', '700px']}
             verticalAlign={'bottom'}
             position={'relative'}
+            bgImage={
+              work.image
+                ? `url(${getStrapiURL(work.image.data.attributes.url)})`
+                : ''
+            }
+            bgRepeat="no-repeat"
+            bgPos={'center'}
           >
             <Box
               position="absolute"
@@ -34,7 +43,7 @@ export default function TiltedCards({work, id}: TiltedCardProps) {
                 {work.name}
               </Heading>
               <Text opacity={0.6} fontSize={['16px', '22px']}>
-                {work.shortDesc}
+                {work.tags}
               </Text>
             </Box>
           </Box>

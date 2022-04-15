@@ -90,7 +90,7 @@ export default function Footer() {
           </Flex>
         </Box>
       </Flex>
-      <Image
+      {/* <Image
         position="absolute"
         right={0}
         src={isSmall ? '/assets/png/brand-sm.png' : '/assets/png/brand.png'}
@@ -98,7 +98,7 @@ export default function Footer() {
         h={['80px', 'auto']}
         w={['264px', 'auto']}
         bottom={0}
-      />
+      /> */}
       <Text
         position="absolute"
         left={0}

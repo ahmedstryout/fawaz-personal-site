@@ -133,7 +133,7 @@ export async function getStaticProps({params}) {
   }
   try {
     project = await fetchAPI(`/projects/${params.id}`, {
-      // populate: ['image'],
+      populate: ['image'],
     })
 
     console.log(project, 'details')
@@ -149,6 +149,7 @@ export async function getStaticProps({params}) {
   }
 }
 
+// helpers
 function StyledHeading(props) {
   return (
     <Heading

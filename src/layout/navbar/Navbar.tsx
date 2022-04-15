@@ -8,6 +8,7 @@ import {
   Text,
   useMediaQuery,
   useDisclosure,
+  Image,
 } from '@chakra-ui/react'
 import {navigation} from 'constants/index.constants'
 import ContactModal from '@/components/contact-modal/ContactModal'
@@ -26,6 +27,8 @@ export default function Navbar() {
     onOpen: openMobileMenu,
     onClose: closeMobileMenu,
   } = useDisclosure()
+
+  const {route} = router
 
   const openContactModal = router.query.contact
 
@@ -47,7 +50,7 @@ export default function Navbar() {
         py={['19px', 10, 12]}
       >
         <Heading fontSize={'28px'} onClick={() => router.push('/')}>
-          UI.joe
+          <Image src={`/assets/svg/logo.svg`} alt="a designs" />
         </Heading>
         {isMobile ? (
           <Text
@@ -64,7 +67,11 @@ export default function Navbar() {
           <Flex columnGap={6}>
             {navigation.map(ele => (
               <Link key={ele.label} href={ele.path} passHref>
-                <Text fontSize={'20px'} cursor={'pointer'}>
+                <Text
+                  fontSize={'20px'}
+                  cursor={'pointer'}
+                  color={route === ele.path ? 'carminePink.400' : 'inherit'}
+                >
                   {ele.label}
                 </Text>
               </Link>
