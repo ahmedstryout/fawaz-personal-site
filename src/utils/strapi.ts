@@ -2,7 +2,7 @@ import qs from 'qs'
 
 export function getStrapiURL(path = '') {
   return `${
-    process.env.NODE_ENV === 'development'
+    process.env.NODE_ENV === 'production'
       ? 'https://fawaz-cms.herokuapp.com'
       : 'http://localhost:1337'
   }${path}`
