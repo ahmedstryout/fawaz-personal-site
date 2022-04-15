@@ -36,7 +36,7 @@ export default function ContactModal({
         <Icon
           as={ImCross}
           color={'#E44949'}
-          boxSize={[6, 12]}
+          boxSize={[6, 10]}
           _hover={{
             cursor: 'pointer',
           }}
@@ -51,7 +51,18 @@ export default function ContactModal({
           color="white"
           flexDirection="column"
         >
-          <Heading fontSize={['48px', '68px', '98px']} letterSpacing="-0.03em">
+          <Heading
+            fontSize={['34px', '48px']}
+            bg="linear-gradient(110.79deg, #EC6154 -11.2%, #ED8153 24%, #EFA651 64.38%, #F1C550 99.58%)"
+            bgClip={'text'}
+          >
+            Got a Great Idea?
+          </Heading>
+          <Heading
+            as="h2"
+            fontSize={['48px', '68px', '98px']}
+            letterSpacing="-0.03em"
+          >
             Let&apos;s Talk
           </Heading>
           <Text
