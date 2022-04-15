@@ -3,7 +3,10 @@ import {Box, Heading, Text, useMediaQuery} from '@chakra-ui/react'
 export default function Hero() {
   const [isMobile] = useMediaQuery('(max-width:460px)')
   return (
-    <Box w={['100%', '60%']} textAlign={['center', 'left']}>
+    <Box
+      w={['100%', '100%', '100%', '60%']}
+      textAlign={['center', 'center', 'center', 'left']}
+    >
       <Heading
         fontSize={['52px', '138px']}
         color="black"

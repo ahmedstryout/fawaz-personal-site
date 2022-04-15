@@ -2,7 +2,7 @@ import Hero from '@/components/hero/Hero'
 import Marquee from '@/components/marquee/Marquee'
 import TiltedCards from '@/components/tilted-cards/TiltedCards'
 import type {NextPage} from 'next'
-import {Box, SimpleGrid} from '@chakra-ui/react'
+import {Box, SimpleGrid, Flex, Image} from '@chakra-ui/react'
 import {fetchAPI} from 'utils/strapi'
 
 export async function getStaticProps() {
@@ -29,7 +29,8 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
   console.log({projects})
   return (
     <Box>
-      <Box
+      <Flex
+        flexDir={['column', 'column', 'column', 'row']}
         as="main"
         borderRadius={'20px'}
         bg="cultured.400"
@@ -38,7 +39,8 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
         width="100%"
       >
         <Hero />
-      </Box>
+        <Image src="/assets/png/home.png" alt="home design" mt={[4, 6, 6, 0]} />
+      </Flex>
       <span id="work" />
       <Marquee />
       <SimpleGrid columns={[1, 2]} spacing={['30px', 10]} my={12}>
