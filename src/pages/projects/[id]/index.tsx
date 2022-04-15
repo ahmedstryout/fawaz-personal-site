@@ -6,8 +6,6 @@ import {fetchAPI} from 'utils/strapi'
 import Image from 'next/image'
 import TiltedCards from '@/components/tilted-cards/TiltedCards'
 
-const darkBg = '#2D3039'
-
 const ProjectDetails: NextPage<{project: any}> = ({project}) => {
   console.log({project})
 
@@ -103,8 +101,8 @@ const ProjectDetails: NextPage<{project: any}> = ({project}) => {
       </Heading>
 
       <SimpleGrid columns={[1, 2]} spacing={['30px', 10]} my={12}>
-        <TiltedCards work={project.attributes} id={project.id} />
-        <TiltedCards work={project.attributes} id={project.id} />
+        <TiltedCards work={project?.attributes} id={project?.id} />
+        <TiltedCards work={project?.attributes} id={project?.id} />
       </SimpleGrid>
     </Box>
   )

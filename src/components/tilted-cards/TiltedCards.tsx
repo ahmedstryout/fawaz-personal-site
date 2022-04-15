@@ -11,6 +11,7 @@ interface TiltedCardProps {
 // https://github.com/mkosir/react-parallax-tilt#readme => refer for props
 
 export default function TiltedCards({work, id}: TiltedCardProps) {
+  if (!work || !id) return null
   return (
     <Link href={`/projects/${id}`} passHref>
       <Box>
