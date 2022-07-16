@@ -4,7 +4,7 @@ export default function Hero() {
   const [isMobile] = useMediaQuery('(max-width:460px)')
   return (
     <Box
-      w={['100%', '100%', '100%', '60%']}
+      w={['100%', '100%', '100%', '64%']}
       textAlign={['center', 'center', 'center', 'left']}
     >
       <Heading
@@ -17,7 +17,7 @@ export default function Hero() {
       <Heading
         textShadow={'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black'}
         color="white"
-        fontSize={['48px', '100px']}
+        fontSize={['48px', '118px']}
         mb={'30px'}
         letterSpacing={'-0.03em'}
       >
@@ -26,9 +26,8 @@ export default function Hero() {
         Forever.
       </Heading>
       <Text fontSize={['16px', '22px']}>
-        24 Year old Product Designer from India, who believes in creating human
-        centric designs, Focused on UX/UI Design, Interaction design,
-        Illustrations and 3D modelling.
+        Product Designer from India, who believes in creating human centric
+        designs, Focused on UX/UI Design, Interaction design.
       </Text>
     </Box>
   )
