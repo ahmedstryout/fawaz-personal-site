@@ -6,14 +6,16 @@ import {Box, Flex, Heading} from '@chakra-ui/react'
 // }
 export default function Interests() {
   return (
-    <Flex mb={['130px']} columnGap={['37px']}>
-      <Box position="relative" width={['50%']}>
+    <Flex mb={['130px']} columnGap={['37px']} flexDir={['column', 'row']}>
+      <Box position={['sticky', 'relative']} top={0} bg="white">
         <Heading
-          fontSize={['64px']}
+          fontSize={['49px', '64px']}
           fontWeight={700}
           letterSpacing="-0.02em"
           position={'sticky'}
-          top={['340px']}
+          top={[0, '340px']}
+          lineHeight="74px"
+          textAlign={'center'}
         >
           Things I love working on
         </Heading>
@@ -22,11 +24,12 @@ export default function Interests() {
         {infos.map(info => (
           <Heading
             key={info.name}
-            fontSize={['64px']}
+            fontSize={['49px', '64px']}
             fontWeight={700}
             letterSpacing="-0.02em"
             mb={['25px']}
             color={info.bg}
+            textAlign={'center'}
           >
             {info.name}
           </Heading>
