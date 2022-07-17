@@ -6,7 +6,7 @@ export default function Marquee() {
   // const [play, setPlay] = React.useState(true)
 
   return (
-    <Box mx={['-20px', '-125px']} mt={['5px', '0px']} mb={['-8px', '0px']}>
+    <Box mx={['-20px', '-125px']} mt={['30px', '140px']} mb={['-8px', '0px']}>
       <FastMarquee
         pauseOnHover={true}
         pauseOnClick={true}

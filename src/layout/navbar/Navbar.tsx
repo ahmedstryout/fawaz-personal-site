@@ -49,7 +49,11 @@ export default function Navbar() {
         px={['20px', 28]}
         py={['19px', 10, 12]}
       >
-        <Heading fontSize={'28px'} onClick={() => router.push('/')}>
+        <Heading
+          fontSize={'28px'}
+          onClick={() => router.push('/')}
+          cursor="pointer"
+        >
           <Image src={`/assets/svg/logo.svg`} alt="a designs" />
         </Heading>
         {isMobile ? (

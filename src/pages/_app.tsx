@@ -15,6 +15,18 @@ function MyApp({Component, pageProps}: AppProps) {
         <title>Fawaz Ahamed</title>
         <meta name="description" content="Fawaz's Personal Portfolio" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="shortcut icon"
+          sizes="16x16 24x24 32x32 48x48 64x64"
+          href="favicons/favicon.ico"
+        />
+
+        {/* <!-- iOS Settings --> */}
+        <meta content="yes" name="apple-mobile-web-app-capable" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        ></meta>
       </Head>
       <Navbar />
       <Box px={['20px', 28]}>

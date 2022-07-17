@@ -14,7 +14,7 @@ export default function TiltedCards({work, id}: TiltedCardProps) {
   if (!work || !id) return null
   return (
     <Link href={`/projects/${id}`} passHref>
-      <Box>
+      <Box cursor={'pointer'}>
         <Tilt tiltMaxAngleX={1} tiltMaxAngleY={1}>
           <Box
             // bg="#2D3039"
@@ -23,7 +23,7 @@ export default function TiltedCards({work, id}: TiltedCardProps) {
             // px="55px"
             // py="60px"
             bgSize="100% 100%"
-            height={['450px', '550px', '700px']}
+            height={['350px', '450px', '520px']}
             verticalAlign={'bottom'}
             position={'relative'}
             bgImage={

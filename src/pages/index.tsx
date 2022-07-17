@@ -49,7 +49,13 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
       <span id="work" />
       <Marquee />
       {projects.length ? (
-        <Text fontSize={['64px']} fontWeight={700} lineHeight="64px">
+        <Text
+          fontSize={['64px']}
+          fontWeight={700}
+          lineHeight="64px"
+          mt={['100px', '151px']}
+          mb={['30px', '70px']}
+        >
           Some of my work
         </Text>
       ) : null}

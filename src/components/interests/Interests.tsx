@@ -6,7 +6,12 @@ import {Box, Flex, Heading} from '@chakra-ui/react'
 // }
 export default function Interests() {
   return (
-    <Flex mb={['130px']} columnGap={['37px']} flexDir={['column', 'row']}>
+    <Flex
+      mb={['130px']}
+      columnGap={['37px']}
+      flexDir={['column', 'row']}
+      mt={['137px']}
+    >
       <Box position={['sticky', 'relative']} top={0} bg="white">
         <Heading
           fontSize={['49px', '64px']}
