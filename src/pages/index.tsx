@@ -4,6 +4,7 @@ import TiltedCards from '@/components/tilted-cards/TiltedCards'
 import type {NextPage} from 'next'
 import {Box, SimpleGrid, Flex, Image, Text} from '@chakra-ui/react'
 import {fetchAPI} from 'utils/strapi'
+import Interests from '@/components/interests/Interests'
 
 export async function getStaticProps() {
   let projects = {
@@ -61,6 +62,7 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
           />
         ))}
       </SimpleGrid>
+      <Interests />
     </Box>
   )
 }
