@@ -8,6 +8,7 @@ import {
   Image,
   Icon,
   useMediaQuery,
+  SimpleGrid,
 } from '@chakra-ui/react'
 import {navigation, socialLinks} from 'constants/index.constants'
 import {FaHeart} from 'react-icons/fa'
@@ -18,8 +19,8 @@ export default function Footer() {
   const [isSmall] = useMediaQuery('max-width:460px')
   const router = useRouter()
   return (
-    <Flex
-      flexDirection={['column', 'column', 'row']}
+    <SimpleGrid
+      templateColumns={['1fr', '1.2fr 1fr']}
       px={['20px', '20px', 28]}
       py={['20px', '20px', 12]}
       bg="black"
@@ -27,27 +28,56 @@ export default function Footer() {
       position={'relative'}
       textAlign={['center', 'center', 'left']}
     >
-      <Box w={['100%', '100%', '40%']} mb={[8, 8, 0]}>
-        <Heading mb={8} fontSize={['38px', '38px', '52px']}>
-          Got a great Idea? <br /> Let’s talk
-        </Heading>
-        <Button
-          borderRadius={'50px'}
-          px={16}
-          color="black"
-          size="lg"
-          onClick={() => router.push({search: '?contact=true'})}
+      <Flex mb={[8, 8, 0]} align="center">
+        <Flex
+          boxSize={['322px']}
+          bgImage={`url(/assets/svg/red-circle.svg)`}
+          bgSize="contain"
+          bgRepeat={'no-repeat'}
+          justify="center"
+          align="center"
+          position="relative"
         >
-          Hire me
-        </Button>
-      </Box>
-      <Flex flexDir={'column'}>
-        <Box mb={8}>
+          <Image
+            src="/assets/svg/memoji-footer.svg"
+            alt="Memoji footer"
+            mb="20px"
+            mr="40px"
+          />
+        </Flex>
+
+        <Box zIndex={3} ml="-73px" lineHeight={'68px'}>
+          <Heading
+            mb={['20px']}
+            fontSize={['38px', '38px', '52px', '58px']}
+            letterSpacing="-0.03em"
+          >
+            Got a great Idea? <br /> Let’s talk
+          </Heading>
+          <Button
+            borderRadius={'50px'}
+            px={['35px']}
+            color="black"
+            size="lg"
+            onClick={() => router.push({search: '?contact=true'})}
+          >
+            Fawazc91@gmail.com
+          </Button>
+        </Box>
+      </Flex>
+
+      <SimpleGrid
+        templateColumns={['1fr 1fr']}
+        alignContent="center"
+        mt={['60px']}
+      >
+        <Box mb={['30px']}>
           <Heading as="h2" mb={4} fontSize={['26px', '26px', '32px']}>
             Find Me Here
           </Heading>
           <Flex
-            columnGap={[2, 4, 6]}
+            flexDir={['column']}
+            rowGap={['20px']}
             justifyContent={['center', 'center', 'flex-start']}
           >
             {socialLinks.map(link => (
@@ -68,12 +98,13 @@ export default function Footer() {
             ))}
           </Flex>
         </Box>
-        <Box mb={8}>
+        <Box mb={['30px']}>
           <Heading as="h2" mb={6} fontSize={['26px', '26px', '32px']}>
             Explore
           </Heading>
           <Flex
-            columnGap={[2, 4, 6]}
+            flexDir={['column']}
+            rowGap={['20px']}
             justifyContent={['center', 'center', 'flex-start']}
           >
             {navigation.map(link => (
@@ -89,27 +120,15 @@ export default function Footer() {
             ))}
           </Flex>
         </Box>
-      </Flex>
-      {/* <Image
-        position="absolute"
+      </SimpleGrid>
+
+      <Image
+        src="/assets/svg/plus01.svg"
+        alt="Plus One"
+        position={'absolute'}
         right={0}
-        src={isSmall ? '/assets/png/brand-sm.png' : '/assets/png/brand.png'}
-        alt="UI Joe"
-        h={['80px', 'auto']}
-        w={['264px', 'auto']}
         bottom={0}
-      /> */}
-      <Text
-        position="absolute"
-        left={0}
-        right={0}
-        marginX={'auto'}
-        bottom={2}
-        textAlign="center"
-        opacity={0.6}
-      >
-        Designed with <Icon as={FaHeart} fill="red" pt={1} /> by Fawaz
-      </Text>
-    </Flex>
+      />
+    </SimpleGrid>
   )
 }
