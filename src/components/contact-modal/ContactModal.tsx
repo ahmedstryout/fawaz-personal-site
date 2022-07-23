@@ -23,7 +23,7 @@ import {
 import {ImCross} from 'react-icons/im'
 import {useRouter} from 'next/router'
 
-const EMAIL = 'Fawazc91@gmail.com'
+export const EMAIL = 'Fawazc91@gmail.com'
 
 export default function ContactModal({
   isOpen,

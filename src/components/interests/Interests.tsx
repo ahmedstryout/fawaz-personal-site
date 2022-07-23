@@ -21,6 +21,7 @@ export default function Interests() {
           top={[0, '340px']}
           lineHeight="74px"
           textAlign={'center'}
+          mb={[0, '25px']}
         >
           Things I love working on
         </Heading>

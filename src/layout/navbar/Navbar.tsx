@@ -48,6 +48,10 @@ export default function Navbar() {
         justifyContent={'space-between'}
         px={['20px', 28]}
         py={['19px', 10, 12]}
+        pos="sticky"
+        top={0}
+        bg="white"
+        zIndex={10}
       >
         <Heading
           fontSize={'28px'}
@@ -89,10 +93,7 @@ export default function Navbar() {
       </Flex>
 
       <ContactModal isOpen={isContactMeOpen} onClose={closeContactMe} />
-      <MenuModal
-        isOpen={isMobileMenuOpen}
-        onClose={closeMobileMenu}
-      />
+      <MenuModal isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
     </>
   )
 }

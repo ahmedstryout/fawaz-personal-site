@@ -18,7 +18,7 @@ export const socialLinks = [
 ]
 
 export const navigation = [
-  {label: 'Work.', path: '#work'},
+  {label: 'Work.', path: '/#work'},
   {label: 'About Me.', path: '/about-me'},
-  {label: 'Contact.', path: '?contact=true'},
+  {label: 'Contact.', path: '/?contact=true'},
 ]
