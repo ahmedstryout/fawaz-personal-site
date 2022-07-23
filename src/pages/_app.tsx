@@ -14,7 +14,7 @@ function MyApp({Component, pageProps}: AppProps) {
       <Head>
         <title>Fawaz Ahamed</title>
         <meta name="description" content="Fawaz's Personal Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicons/favicon.ico" />
         <link
           rel="shortcut icon"
           sizes="16x16 24x24 32x32 48x48 64x64"
