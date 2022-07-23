@@ -9,6 +9,16 @@ import {
   Text,
   Link,
   Icon,
+  Image,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
 } from '@chakra-ui/react'
 import {ImCross} from 'react-icons/im'
 import {useRouter} from 'next/router'
@@ -22,6 +32,7 @@ export default function ContactModal({
   isOpen: boolean
   onClose: () => void
 }) {
+  const [active, setActive] = React.useState(false)
   const router = useRouter()
   return (
     <Modal
@@ -51,10 +62,29 @@ export default function ContactModal({
           color="white"
           flexDirection="column"
         >
+          {active ? (
+            <Popover isOpen={active} placement="right">
+              <PopoverTrigger>
+                <Image src="/assets/svg/contact-1.svg" alt="contact me" />
+              </PopoverTrigger>
+              <PopoverContent py="10px" width="280px">
+                <PopoverArrow />
+                <PopoverCloseButton />
+                <PopoverBody>
+                  <Text fontSize={'22px'} color="black" textAlign="center">
+                    Let&apos;s Connect!
+                  </Text>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+          ) : (
+            <Image src="/assets/svg/contact-2.svg" alt="contact me" />
+          )}
           <Heading
             fontSize={['34px', '48px']}
             bg="linear-gradient(110.79deg, #EC6154 -11.2%, #ED8153 24%, #EFA651 64.38%, #F1C550 99.58%)"
             bgClip={'text'}
+            mt="24px"
           >
             Got a Great Idea?
           </Heading>
@@ -62,6 +92,7 @@ export default function ContactModal({
             as="h2"
             fontSize={['48px', '68px', '98px']}
             letterSpacing="-0.03em"
+            mb="14px"
           >
             Let&apos;s Talk
           </Heading>
@@ -85,6 +116,10 @@ export default function ContactModal({
             textAlign="center"
             py="22px"
             mt={['30px', '38px']}
+            bgColor={active ? 'black' : 'white'}
+            color={active ? 'white' : 'black'}
+            onMouseEnter={() => setActive(true)}
+            onMouseLeave={() => setActive(false)}
           >
             {EMAIL}
           </Link>

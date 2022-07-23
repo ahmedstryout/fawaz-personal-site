@@ -11,7 +11,7 @@ import {
   Icon,
   Flex,
   ModalCloseButton,
-  Image
+  Image,
 } from '@chakra-ui/react'
 import {ImCross} from 'react-icons/im'
 import {useRouter} from 'next/router'
@@ -32,7 +32,7 @@ export default function MenuModal({
       onClose={onClose}
       blockScrollOnMount={true}
       size="full"
-      motionPreset="scale"
+      motionPreset="slideInRight"
     >
       <ModalOverlay />
       <ModalContent
@@ -86,7 +86,13 @@ export default function MenuModal({
           </Flex>
         </ModalBody>
 
-        <Image src="/assets/svg/menu-modal.svg" alt="memoji" position='absolute' bottom={0} right={0} />
+        <Image
+          src="/assets/svg/menu-modal.svg"
+          alt="memoji"
+          position="absolute"
+          bottom={0}
+          right={0}
+        />
       </ModalContent>
     </Modal>
   )
