@@ -89,7 +89,10 @@ export default function Navbar() {
       </Flex>
 
       <ContactModal isOpen={isContactMeOpen} onClose={closeContactMe} />
-      <MenuModal isOpen={isMobileMenuOpen} onClose={closeMobileMenu} />
+      <MenuModal
+        isOpen={isMobileMenuOpen}
+        onClose={closeMobileMenu}
+      />
     </>
   )
 }
