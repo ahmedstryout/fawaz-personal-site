@@ -44,22 +44,27 @@ const Home: NextPage<{projects: any[]}> = ({projects}) => {
         align="center"
       >
         <Hero />
-        <Image src="/assets/svg/hero.svg" alt="home design" mt={[4, 6, 6, 0]} />
+        <Image
+          src="/assets/svg/hero.svg"
+          alt="home design"
+          mt={[4, 6, 6, 0]}
+          boxSize={['300px', '500px']}
+        />
       </Flex>
       <span id="work" />
       <Marquee />
       {projects.length ? (
         <Text
-          fontSize={['64px']}
+          fontSize={['54px', '64px']}
           fontWeight={700}
           lineHeight="64px"
-          mt={['100px', '151px']}
+          mt={['50px', '151px']}
           mb={['30px', '70px']}
         >
           Some of my work
         </Text>
       ) : null}
-      <SimpleGrid columns={[1, 2]} spacing={['30px', 10]} my={12}>
+      <SimpleGrid columns={[1, 2]} spacing={['30px', 10]} my={['20px', 12]}>
         {projects.map((project, _idx) => (
           <TiltedCards
             key={project.id}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import {
   Box,
   Button,
@@ -6,31 +7,31 @@ import {
   Heading,
   Text,
   Image,
-  Icon,
   useMediaQuery,
   SimpleGrid,
 } from '@chakra-ui/react'
 import {navigation, socialLinks} from 'constants/index.constants'
-import {FaHeart} from 'react-icons/fa'
-import Link from 'next/link'
 import {useRouter} from 'next/router'
 
 export default function Footer() {
   const [isSmall] = useMediaQuery('max-width:460px')
   const router = useRouter()
+
+  console.log(isSmall)
   return (
     <SimpleGrid
       templateColumns={['1fr', '1.2fr 1fr']}
       px={['20px', '20px', 28]}
       py={['20px', '20px', 12]}
+      pt={['100px', '20px', 12]}
       bg="black"
       color="white"
       position={'relative'}
       textAlign={['center', 'center', 'left']}
     >
-      <Flex mb={[8, 8, 0]} align="center">
+      <Flex mb={[8, 8, 0]} align="center" direction={['column', 'row']}>
         <Flex
-          boxSize={['322px']}
+          boxSize={['260px', '322px']}
           bgImage={`url(/assets/svg/red-circle.svg)`}
           bgSize="contain"
           bgRepeat={'no-repeat'}
@@ -46,7 +47,7 @@ export default function Footer() {
           />
         </Flex>
 
-        <Box zIndex={3} ml="-73px" lineHeight={'68px'}>
+        <Box zIndex={3} ml={[0, '-73px']} mt={['-30px', 0]} lineHeight={'68px'}>
           <Heading
             mb={['20px']}
             fontSize={['38px', '38px', '52px', '58px']}
@@ -61,24 +62,27 @@ export default function Footer() {
             size="lg"
             onClick={() => router.push({search: '?contact=true'})}
           >
-            Fawazc91@gmail.com
+            {isSmall ? 'Hire me' : 'Fawazc91@gmail.com'}
           </Button>
         </Box>
       </Flex>
 
       <SimpleGrid
-        templateColumns={['1fr 1fr']}
+        templateColumns={['fr', '1fr 1fr']}
         alignContent="center"
-        mt={['60px']}
+        mt={['47px', '60px']}
       >
         <Box mb={['30px']}>
           <Heading as="h2" mb={4} fontSize={['26px', '26px', '32px']}>
             Find Me Here
           </Heading>
-          <Flex
+          <Box
+            display={['grid', 'flex']}
             flexDir={['column']}
             rowGap={['20px']}
             justifyContent={['center', 'center', 'flex-start']}
+            gridTemplateColumns="1fr 1fr"
+            gridTemplateRows="1fr 1fr"
           >
             {socialLinks.map(link => (
               <a
@@ -96,15 +100,16 @@ export default function Footer() {
                 </Text>
               </a>
             ))}
-          </Flex>
+          </Box>
         </Box>
         <Box mb={['30px']}>
           <Heading as="h2" mb={6} fontSize={['26px', '26px', '32px']}>
             Explore
           </Heading>
           <Flex
-            flexDir={['column']}
+            flexDir={['row', 'column']}
             rowGap={['20px']}
+            columnGap={['20px']}
             justifyContent={['center', 'center', 'flex-start']}
           >
             {navigation.map(link => (
@@ -128,6 +133,7 @@ export default function Footer() {
         position={'absolute'}
         right={0}
         bottom={0}
+        height={['90px', 'auto']}
       />
     </SimpleGrid>
   )

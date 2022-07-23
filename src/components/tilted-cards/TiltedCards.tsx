@@ -23,7 +23,7 @@ export default function TiltedCards({work, id}: TiltedCardProps) {
             // px="55px"
             // py="60px"
             bgSize="100% 100%"
-            height={['350px', '450px', '520px']}
+            height={['350px', '450px', '500px']}
             verticalAlign={'bottom'}
             position={'relative'}
             bgImage={

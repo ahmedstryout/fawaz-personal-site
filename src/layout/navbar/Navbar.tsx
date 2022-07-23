@@ -54,7 +54,11 @@ export default function Navbar() {
           onClick={() => router.push('/')}
           cursor="pointer"
         >
-          <Image src={`/assets/svg/logo.svg`} alt="a designs" />
+          <Image
+            src={`/assets/svg/logo.svg`}
+            alt="a designs"
+            height={['20px', 'auto']}
+          />
         </Heading>
         {isMobile ? (
           <Text
