@@ -1,19 +1,11 @@
 import * as React from 'react'
 import FastMarquee from 'react-fast-marquee'
-import {
-  Box,
-  Flex,
-  Heading,
-  Text,
-  useMediaQuery,
-  Image,
-  Link,
-} from '@chakra-ui/react'
+import {Box, Flex, Heading, Text, Image, Link} from '@chakra-ui/react'
 import {EMAIL} from '@/components/contact-modal/ContactModal'
 
 export default function AboutMe() {
-  const [isSmallWidth] = useMediaQuery('(max-width:900px)')
   const [invert, setInvert] = React.useState(false)
+
   return (
     <Box
       w={['100%']}
@@ -36,11 +28,10 @@ export default function AboutMe() {
         w={['70%', '40%']}
         h={['50%', '120%', '700px']}
         bgColor="#E44949"
-        top={['-15%', 0]}
-        left={isSmallWidth ? 0 : undefined}
-        right={isSmallWidth ? 0 : undefined}
-        bottom={!isSmallWidth ? 0 : undefined}
-        // bottom={undefined}
+        top={['-17%', 0]}
+        left={[0, 0, 'auto']}
+        right={[0, 0, 'auto']}
+        bottom={['auto', 'auto', 0]}
         margin="auto"
         zIndex={1}
       >
@@ -158,32 +149,17 @@ export default function AboutMe() {
         >
           Hello!
         </Heading>
-        <Text
-          fontSize={['16px', '22px']}
-          letterSpacing={'-0.02em'}
-          // color={invert ? 'white' : 'inherit'}
-        >
+        <Text fontSize={['16px', '22px']} letterSpacing={'-0.02em'}>
           24 Year old Product Designer from India, who believes in creating
           human centric designs, Focused on UX/UI Design, Interaction design,
           Illustrations and 3D modelling.
         </Text>
 
-        <Heading
-          as="h2"
-          mt={['40px']}
-          fontSize={['26px']}
-          w="100%"
-          // color={invert ? 'white' : 'inherit'}
-        >
+        <Heading as="h2" mt={['40px']} fontSize={['26px']} w="100%">
           Things I love
         </Heading>
 
-        <Text
-          fontSize={['20px']}
-          mt={['10px']}
-          opacity={0.7}
-          // color={invert ? 'white' : 'inherit'}
-        >
+        <Text fontSize={['20px']} mt={['10px']} opacity={0.7}>
           UX Design. UI Design. Motion Design. Branding. Graphic Design. Web
           Development.
         </Text>
@@ -192,5 +168,21 @@ export default function AboutMe() {
   )
 }
 
-const content1 = ['UX Design.', 'UI Design.', 'Motion Design.', 'Branding.']
-const content2 = ['Graphic Design.', 'Web Development.', 'Traveling.']
+const content1 = [
+  'UX Design.',
+  'UI Design.',
+  'Motion Design.',
+  'Branding.',
+  'Graphic Design.',
+  'Web Development.',
+  'Traveling.',
+]
+const content2 = [
+  'Traveling.',
+  'Web Development.',
+  'Graphic Design.',
+  'Branding.',
+  'Motion Design.',
+  'UI Design.',
+  'UX Design.',
+]

@@ -17,12 +17,12 @@ export default function Hero() {
       <Heading
         textShadow={'-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black'}
         color="white"
-        fontSize={['42px', '52px', '98px', '118px']}
+        fontSize={['48px', '52px', '98px', '118px']}
         mb={'30px'}
         letterSpacing={'-0.03em'}
       >
         Designs.
-        {/* {isMobile ? <br /> : null} */}
+        {isMobile ? <br /> : null}
         Forever.
       </Heading>
       <Text fontSize={['16px', '22px']}>

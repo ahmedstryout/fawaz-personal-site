@@ -12,7 +12,7 @@ export default function Interests() {
       flexDir={['column', 'row']}
       mt={['137px']}
     >
-      <Box position={['sticky', 'relative']} top={0} bg="white">
+      <Box position={['sticky', 'relative']} top={['68px', 0]} bg="white">
         <Heading
           fontSize={['49px', '64px']}
           fontWeight={700}

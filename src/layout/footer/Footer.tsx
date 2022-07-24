@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 import {
   Box,
@@ -7,17 +6,14 @@ import {
   Heading,
   Text,
   Image,
-  useMediaQuery,
   SimpleGrid,
 } from '@chakra-ui/react'
 import {navigation, socialLinks} from 'constants/index.constants'
 import {useRouter} from 'next/router'
 
 export default function Footer() {
-  const [isSmall] = useMediaQuery('max-width:460px')
   const router = useRouter()
 
-  console.log(isSmall)
   return (
     <SimpleGrid
       templateColumns={['1fr', '1.2fr 1fr']}
@@ -62,7 +58,7 @@ export default function Footer() {
             size="lg"
             onClick={() => router.push({search: '?contact=true'})}
           >
-            {isSmall ? 'Hire me' : 'Fawazc91@gmail.com'}
+            Fawazc91@gmail.com
           </Button>
         </Box>
       </Flex>
@@ -111,6 +107,7 @@ export default function Footer() {
             rowGap={['20px']}
             columnGap={['20px']}
             justifyContent={['center', 'center', 'flex-start']}
+            zIndex={1}
           >
             {navigation.map(link => (
               <Link key={link.label} href={link.path} passHref>
